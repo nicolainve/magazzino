@@ -11,13 +11,13 @@ class Store {
 
   public Store(Product[] list) {
     this.list = list;
-    productsLength = list.length + 2;
+    productsLength = list.length;
     maxProductsLength = 10;
   }
 
   public Store(Product[] list, int maxProductsLength) {
     this.list = list;
-    productsLength = list.length + 2;
+    productsLength = list.length;
     this.maxProductsLength = maxProductsLength;
   }
 
