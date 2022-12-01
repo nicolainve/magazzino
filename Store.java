@@ -90,7 +90,7 @@ class Store {
     Product[] listUnderPrice = new Product[count];
     for (int i = 0; i < list.length; i++) {
       if (list[i].getPrice() < price) {
-        listUnderPrice[i] = list[i];
+        listUnderPrice[i] = new Product(list[i]);
       }
     }
     return listUnderPrice;

@@ -12,6 +12,11 @@ class Product {
     setPrice(price);
   }
 
+  public Product(Product product) {
+    name = product.name;
+    price = product.price;
+  }
+
   public String getName() {
     return name;
   }
