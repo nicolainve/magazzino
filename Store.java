@@ -82,15 +82,17 @@ class Store {
 
   public Product[] productsUnderPrice(double price) {
     int count = 0;
-    for (Product product : list) {
-      if (product.getPrice() < price) {
+    for (int i = 0; i < productsLength; i++) {
+      if (list[i].getPrice() < price) {
         count++;
       }
     }
     Product[] listUnderPrice = new Product[count];
-    for (int i = 0; i < list.length; i++) {
+    int position = 0;
+    for (int i = 0; i < productsLength; i++) {
       if (list[i].getPrice() < price) {
-        listUnderPrice[i] = new Product(list[i]);
+        listUnderPrice[position] = new Product(list[i]);
+        position++;
       }
     }
     return listUnderPrice;
